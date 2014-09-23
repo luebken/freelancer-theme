@@ -12,4 +12,8 @@ ADD . /usr/src/app
 
 EXPOSE 4000
 
+ONBUILD ADD _config.yml /usr/src/app/
+ONBUILD ADD _posts/ /usr/src/app/
+ONBUILD ADD img/ /usr/src/app/
+
 CMD ["jekyll", "serve"]
